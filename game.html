@@ -3,59 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiplayer Game</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        #game { width: 800px; height: 600px; border: 1px solid black; position: relative; margin: auto; }
-        .enemy { width: 50px; height: 50px; background: red; position: absolute; }
-        .player { width: 30px; height: 30px; background: blue; position: absolute; }
-    </style>
+    <title>Adam's Quest - Computer Edition</title>
 </head>
 <body>
-    <h1>Welcome to the Multiplayer Game!</h1>
-    <div id="game"></div>
-    <script>
-        const gameDiv = document.getElementById('game');
-        const enemies = [];
-        const players = [{id: 1, x: 100, y: 100}, {id: 2, x: 150, y: 150}];
-
-        function createEnemy(x, y) {
-            const enemy = document.createElement('div');
-            enemy.classList.add('enemy');
-            enemy.style.left = `${x}px`;
-            enemy.style.top = `${y}px`;
-            gameDiv.appendChild(enemy);
-            enemies.push(enemy);
-        }
-
-        function updatePlayers() {
-            players.forEach(player => {
-                const playerDiv = document.createElement('div');
-                playerDiv.classList.add('player');
-                playerDiv.style.left = `${player.x}px`;
-                playerDiv.style.top = `${player.y}px`;
-                gameDiv.appendChild(playerDiv);
-            });
-        }
-
-        // Example of creating some enemies
-        createEnemy(300, 200);
-        createEnemy(500, 250);
-        createEnemy(400, 300);
-
-        // Updating players on the game screen
-        updatePlayers();
-
-        // Basic control for players (for example purposes)
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'ArrowUp') players[0].y -= 5;
-            if (event.key === 'ArrowDown') players[0].y += 5;
-            if (event.key === 'ArrowLeft') players[0].x -= 5;
-            if (event.key === 'ArrowRight') players[0].x += 5;
-            gameDiv.innerHTML = ''; // Clear previous frames
-            updatePlayers(); // Redraw players
-            enemies.forEach(enemy => gameDiv.appendChild(enemy)); // Redraw enemies
-        });
-    </script>
+    <h1>Welcome to Adam's Quest</h1>
+    <p>Join Adam on an epic adventure through 20 exciting stages in this fantasy pixel art world!</p>
+    <h2>Features</h2>
+    <ul>
+        <li>Pixel Art Character Designs</li>
+        <li>20 Adventure Stages</li>
+        <li>Sandbox Mode</li>
+        <li>Mobile Touch Controls</li>
+    </ul>
+    <footer>
+        <p>&copy; 2026 Adventure Game Studios</p>
+    </footer>
 </body>
 </html>
